@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Form Demonstration</h1>
+        <p>Showcasing lists, tables, media, and semantic form elements</p>
+    </header>
+
+    <main>
+        <!-- Lists Section -->
+        <section aria-labelledby="lists-heading">
+            <h2 id="lists-heading">Our Services</h2>
+            <h3>Ordered List of Steps</h3>
+            <ol>
+                <li>Initial consultation</li>
+                <li>Requirements analysis</li>
+                <li>Design proposal</li>
+                <li>Implementation</li>
+                <li>Quality assurance</li>
+            </ol>
+
+            <h3>Unordered List of Features</h3>
+            <ul>
+                <li>HTML5 semantic markup</li>
+                <li>Accessibility compliance</li>
+                <li>Responsive design</li>
+                <li>SEO optimization</li>
+            </ul>
+        </section>
+
+        <!-- Table Section -->
+        <section aria-labelledby="table-heading">
+            <h2 id="table-heading">Pricing Plans</h2>
+            <table>
+                <caption>Monthly subscription options</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Plan</th>
+                        <th scope="col">Features</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Basic</th>
+                        <td>
+                            <ul>
+                                <li>Standard support</li>
+                                <li>5 projects</li>
+                            </ul>
+                        </td>
+                        <td>$19.99</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Pro</th>
+                        <td>
+                            <ul>
+                                <li>Priority support</li>
+                                <li>Unlimited projects</li>
+                                <li>Advanced analytics</li>
+                            </ul>
+                        </td>
+                        <td>$49.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section aria-labelledby="media-heading">
+            <h2 id="media-heading">Product Demonstration</h2>
+            
+            <figure>
+                <img src="https://via.placeholder.com/800x400" alt="Our product in action" width="800" height="400">
+                <figcaption>Our flagship product interface</figcaption>
+            </figure>
+            
+            <h3>Product Video</h3>
+            <video controls width="800" height="450" poster="https://via.placeholder.com/800x450">
+                <source src="product-demo.mp4" type="video/mp4">
+                <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+                Your browser does not support the video tag.
+            </video>
+            
+            <h3>Product Audio Guide</h3>
+            <audio controls>
+                <source src="audio-guide.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Form Section -->
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Contact Us</h2>
+            <form id="contact-form" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required minlength="2" 
+                           placeholder="Enter your full name" autocomplete="name">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="your.email@example.com" autocomplete="email">
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                           placeholder="123-456-7890" autocomplete="tel">
+                    
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" max="2005-12-31">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <label for="plan">Select a Plan:</label>
+                    <select id="plan" name="plan" required>
+                        <option value="" disabled selected>Choose a plan</option>
+                        <option value="basic">Basic ($19.99/month)</option>
+                        <option value="pro">Pro ($49.99/month)</option>
+                    </select>
+                    
+                    <label>Interested in (check all that apply):</label>
+                    <div>
+                        <input type="checkbox" id="web-dev" name="interest" value="web-dev">
+                        <label for="web-dev">Web Development</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="seo" name="interest" value="seo">
+                        <label for="seo">SEO Services</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="accessibility" name="interest" value="accessibility">
+                        <label for="accessibility">Accessibility Audit</label>
+                    </div>
+                    
+                    <label for="color">Favorite Color:</label>
+                    <input type="color" id="color" name="color" value="#0066cc">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" 
+                              placeholder="Type your message here..." minlength="10" required></textarea>
+                    
+                    <label for="file">Upload a File (optional):</label>
+                    <input type="file" id="file" name="file" accept=".pdf,.doc,.docx">
+                    
+                    <label for="range">Satisfaction Level (1-10):</label>
+                    <input type="range" id="range" name="range" min="1" max="10" value="5">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Terms</legend>
+                    <div>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the terms and conditions</label>
+                    </div>
+                    
+                    <label for="newsletter">Subscribe to newsletter:</label>
+                    <input type="radio" id="newsletter-yes" name="newsletter" value="yes" checked>
+                    <label for="newsletter-yes">Yes</label>
+                    <input type="radio" id="newsletter-no" name="newsletter" value="no">
+                    <label for="newsletter-no">No</label>
+                </fieldset>
+
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Enhanced HTML5 Form Demo. All rights reserved.</p>
+        <address>
+            Contact: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </footer>
+</body>
+</html>
